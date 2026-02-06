@@ -63,6 +63,48 @@ namespace ConsoleApp11
             //    price *= 0.8;
             //Console.WriteLine("Final Ticket Price: " + price + " EGP");
             #endregion
+
+            #region Question 3
+            // (a)A traditional switch statement
+            //string fileExtension = ".pdf";
+            //string fileType;
+
+            //switch (fileExtension )
+            //{
+            //    case ".pdf":
+            //        fileType = "**PDF Document**";
+            //        break;
+            //    case ".docx":
+            //    case ".doc":
+            //        fileType = "**Word Document**";
+            //        break;
+            //    case ".xlsx":
+            //    case ".xls":
+            //        fileType = "**Excel Spreadsheet**";
+            //        break;
+            //    case ".jpg":
+            //    case ".png":
+            //    case ".gif":
+            //        fileType = "**Image File**";
+            //        break;
+            //    default:
+            //        fileType = "**Unknown File Type**";
+            //        break;
+            //}
+            //Console.WriteLine(fileType);
+            //(b) A switch expression  
+            //string fileExtension = ".pdf";
+            //string fileType = fileExtension switch
+            //{
+            //    ".pdf" => "**PDF Document**",
+            //    ".docx" or ".doc" => "**Word Document**",
+            //    ".xlsx" or ".xls" => "**Excel Spreadsheet**",
+            //    ".jpg" or ".png" or ".gif" => "**Image File**",
+            //    _ => "**Unknown File Type**"
+            //};
+            //Console.WriteLine(fileType);
+
+            #endregion
         }
     }
 }
