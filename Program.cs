@@ -129,6 +129,54 @@ namespace ConsoleApp11
             //        It should be used for simple, straightforward decisions
 
             #endregion
-        }
+
+            #region Question 5
+
+                //int MIN_LENGTH = 8;
+                //int MAX_ATTEMPTS = 5;
+
+                //int attempts = 0;
+                //bool passwordAccepted = false;
+                //string password;
+
+                //do
+                //{
+                //    Console.WriteLine($"\nEnter a password (Attempt {attempts + 1} of {MAX_ATTEMPTS}):");
+                //    password = Console.ReadLine();
+                //    attempts++;
+                //    bool hasMinLength = password.Length >= MIN_LENGTH;
+                //    bool hasUppercase = false;
+                //    bool hasDigit = false;
+                //    bool hasNoSpaces = !password.Contains(" "); 
+
+                //    foreach (char c in password)
+                //    {
+                //        if (char.IsUpper(c)) hasUppercase = true;
+                //        if (char.IsDigit(c)) hasDigit = true;
+                //    }
+                //    passwordAccepted = hasMinLength && hasUppercase && hasDigit && hasNoSpaces;
+
+                //    if (passwordAccepted)
+                //    {
+                //        Console.WriteLine("\n**Password accepted!**");
+                //        break; 
+                //    }
+                //    else if (attempts >= MAX_ATTEMPTS)
+                //    {
+                //        Console.WriteLine("\n**Account locked.** Exiting program.");
+                //    }
+                //    else
+                //    {
+                //        Console.WriteLine("\nInvalid password. Rules violated:");
+                //        if (!hasMinLength) Console.WriteLine("- Minimum 8 characters required.");
+                //        if (!hasUppercase) Console.WriteLine("- At least one uppercase letter required.");
+                //        if (!hasDigit) Console.WriteLine("- At least one digit required.");
+                //        if (!hasNoSpaces) Console.WriteLine("- No spaces allowed.");
+                //    }
+
+                //} while (!passwordAccepted && attempts < MAX_ATTEMPTS);
+                //Console.ReadKey();
+        #endregion
     }
+}
 }
