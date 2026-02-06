@@ -105,6 +105,30 @@ namespace ConsoleApp11
             //Console.WriteLine(fileType);
 
             #endregion
+
+            #region Question 4
+            //Rewrite the following using only ternary operators(no if statements):
+
+            //int temperature = 35;
+            //string weatherAdvice;
+
+            //weatherAdvice = (temperature < 0) ? "Freezing! Stay indoors." :
+            //                (temperature < 15) ? "Cold. Wear a jacket." :
+            //                (temperature < 25) ? "Pleasant weather." :
+            //                (temperature < 35) ? "Warm. Stay hydrated." :
+            //                "Hot! Avoid sun exposure.";
+
+            //Then answer: Is the ternary version more readable? 
+            //   -- the ternary version is less readable
+
+            //    When would you choose one over the other ? 
+            //     --choose if statements:
+            //        When conditions are complex
+            //        When clarity and maintainability are paramount
+            //    -- choose the ternary operator  
+            //        It should be used for simple, straightforward decisions
+
+            #endregion
         }
     }
 }
