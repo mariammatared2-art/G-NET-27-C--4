@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Reflection.Metadata;
 using System.Text;
 
 namespace ConsoleApp11
@@ -132,50 +133,143 @@ namespace ConsoleApp11
 
             #region Question 5
 
-                //int MIN_LENGTH = 8;
-                //int MAX_ATTEMPTS = 5;
+            //int MIN_LENGTH = 8;
+            //int MAX_ATTEMPTS = 5;
 
-                //int attempts = 0;
-                //bool passwordAccepted = false;
-                //string password;
+            //int attempts = 0;
+            //bool passwordAccepted = false;
+            //string password;
 
-                //do
+            //do
+            //{
+            //    Console.WriteLine($"\nEnter a password (Attempt {attempts + 1} of {MAX_ATTEMPTS}):");
+            //    password = Console.ReadLine();
+            //    attempts++;
+            //    bool hasMinLength = password.Length >= MIN_LENGTH;
+            //    bool hasUppercase = false;
+            //    bool hasDigit = false;
+            //    bool hasNoSpaces = !password.Contains(" "); 
+
+            //    foreach (char c in password)
+            //    {
+            //        if (char.IsUpper(c)) hasUppercase = true;
+            //        if (char.IsDigit(c)) hasDigit = true;
+            //    }
+            //    passwordAccepted = hasMinLength && hasUppercase && hasDigit && hasNoSpaces;
+
+            //    if (passwordAccepted)
+            //    {
+            //        Console.WriteLine("\n**Password accepted!**");
+            //        break; 
+            //    }
+            //    else if (attempts >= MAX_ATTEMPTS)
+            //    {
+            //        Console.WriteLine("\n**Account locked.** Exiting program.");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("\nInvalid password. Rules violated:");
+            //        if (!hasMinLength) Console.WriteLine("- Minimum 8 characters required.");
+            //        if (!hasUppercase) Console.WriteLine("- At least one uppercase letter required.");
+            //        if (!hasDigit) Console.WriteLine("- At least one digit required.");
+            //        if (!hasNoSpaces) Console.WriteLine("- No spaces allowed.");
+            //    }
+
+            //} while (!passwordAccepted && attempts < MAX_ATTEMPTS);
+            //Console.ReadKey();
+            #endregion
+
+            #region Question 6
+    
+                //int[] scores = { 85, 42, 91, 67, 55, 78, 39, 88, 72, 95, 60, 48 };
+
+                //Console.WriteLine("--- Array Processing Results ---");
+
+                //// (a) Find and display all failing scores (below 50) using foreach ---
+                //Console.WriteLine("\na) Failing scores (below 50):");
+                //foreach (int score in scores)
                 //{
-                //    Console.WriteLine($"\nEnter a password (Attempt {attempts + 1} of {MAX_ATTEMPTS}):");
-                //    password = Console.ReadLine();
-                //    attempts++;
-                //    bool hasMinLength = password.Length >= MIN_LENGTH;
-                //    bool hasUppercase = false;
-                //    bool hasDigit = false;
-                //    bool hasNoSpaces = !password.Contains(" "); 
-
-                //    foreach (char c in password)
+                //    if (score < 50)
                 //    {
-                //        if (char.IsUpper(c)) hasUppercase = true;
-                //        if (char.IsDigit(c)) hasDigit = true;
+                //        Console.WriteLine(score);
                 //    }
-                //    passwordAccepted = hasMinLength && hasUppercase && hasDigit && hasNoSpaces;
+                //}
 
-                //    if (passwordAccepted)
+                //// (b) Find the first score above 90 and stop searching immediately using for ---
+                //Console.WriteLine("\nb) First score above 90 (stop searching immediately):");
+                //for (int i = 0; i < scores.Length; i++)
+                //{
+                //    if (scores[i] > 90)
                 //    {
-                //        Console.WriteLine("\n**Password accepted!**");
+                //        Console.WriteLine(scores[i]);
                 //        break; 
                 //    }
-                //    else if (attempts >= MAX_ATTEMPTS)
+                //}
+
+                ////  (c) Calculate the class average, excluding any scores below 40 using while ---
+                //Console.WriteLine("\nc) Class average (excluding scores below 40):");
+                //int sum = 0;
+                //int count = 0;
+                //int index = 0;
+
+                //while (index < scores.Length)
+                //{
+                //    int currentScore = scores[index];
+                //    index++;
+
+                //    if (currentScore < 40)
                 //    {
-                //        Console.WriteLine("\n**Account locked.** Exiting program.");
-                //    }
-                //    else
-                //    {
-                //        Console.WriteLine("\nInvalid password. Rules violated:");
-                //        if (!hasMinLength) Console.WriteLine("- Minimum 8 characters required.");
-                //        if (!hasUppercase) Console.WriteLine("- At least one uppercase letter required.");
-                //        if (!hasDigit) Console.WriteLine("- At least one digit required.");
-                //        if (!hasNoSpaces) Console.WriteLine("- No spaces allowed.");
+                //        continue; 
                 //    }
 
-                //} while (!passwordAccepted && attempts < MAX_ATTEMPTS);
-                //Console.ReadKey();
+                //    sum += currentScore;
+                //    count++;
+                //}
+
+                //if (count > 0)
+                //{
+                //    double average = (double)sum / count;
+                //    Console.WriteLine($"Average: {average:F2}");
+                //}
+                //else
+                //{
+                //    Console.WriteLine("No valid scores to calculate average.");
+                //}
+
+                ////  (d) Count how many students scored in each grade range using foreach and switch ---
+                //Console.WriteLine("\nd) Count students in each grade range:");
+                //int countA = 0, countB = 0, countC = 0, countD = 0, countF = 0;
+
+                //foreach (int score in scores)
+                //{
+                //    switch (score)
+                //    {
+                //        case int n when n >= 90:
+                //            countA++;
+                //            break;
+                //        case int n when n >= 80:
+                //            countB++;
+                //            break;
+                //        case int n when n >= 70:
+                //            countC++;
+                //            break;
+                //        case int n when n >= 60:
+                //            countD++;
+                //            break;
+                //        default:
+                //            countF++;
+                //            break;
+                //    }
+                //}
+
+                //Console.WriteLine($"A (90-100): {countA}");
+                //Console.WriteLine($"B (80-89): {countB}");
+                //Console.WriteLine($"C (70-79): {countC}");
+                //Console.WriteLine($"D (60-69): {countD}");
+                //Console.WriteLine($"F (Below 60): {countF}");
+
+                //Console.WriteLine("\n--- End of Results ---");
+    
         #endregion
     }
 }
